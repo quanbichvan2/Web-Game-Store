@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(180deg, #1b3244 0%, #1B2838 80%);
+}
+
+
+.menu {
+    background-color: #171a21;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 2rem 5rem;
+}
+
+.menu .left {
+    display: flex;
+    align-items: center;
+}
+
+.menu .left .logo {
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu .left img {
+    position: absolute;
+    width: 100%;
+}
+
+.menu .left>ul {
+    flex: 1;
+    display: flex;
+}
+
+.menu .left ul li {
+    margin-left: 16px;
+    position: relative;
+    ;
+}
+
+.menu .left ul li a {
+    color: #b8b6b4;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 0.5rem 1rem;
+    border-radius: 6rem;
+}
+
+.menu .left ul li a:hover {
+    background-color: #fff;
+    color: #171a21;
+}
+
+.menu .left li:hover .sub-menu {
+    height: unset;
+}
+
+.menu .left .sub-menu {
+    position: absolute;
+    background-color: #171a21;
+    margin: -15px;
+    top: 45px;
+    padding: 2px;
+    width: 13rem;
+    overflow: hidden;
+    transition: 3s;
+    height: 0;
+    z-index: 10000000000000;
+}
+
+.menu .left .sub-menu li {
+    padding: 0.5rem 0;
+    color: black;
+    cursor: pointer;
+}
+
+.menu .left .sub-menu li:hover a {
+    color: #ffffff;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+
+article {
+    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url(https://store.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg) center top no-repeat, #181A21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    height: 100%;
+}
+
+.content {
+    width: 700px;
+
+}
+
+.content-title {
+    color: white;
+    font-size: 62px;
+    font-style: oblique;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 8px 16px;
+}
+
+.form-container {
+    padding: 24px 32px;
+    background-color: #181a21;
+    border-radius: 4px;
+    margin: 0px 0px 50px;
+    flex: 1;
+}
+
+.loginLog {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding-top: 10px;
+}
+
+
+.box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: yellow;
+}
+
+#eye {
+    position: absolute;
+    right: 1rem;
+    color: white;
+}
+
+
+#eye_close {
+    position: absolute;
+    right: 1rem;
+    color: white;
+    cursor: pointer;
+    z-index: 100000000000;
+}
+
+#eye_close:hover {
+    color: rgba(255, 255, 255, 0);
+}
+
+
+
+label {
+    color: #1999ff;
+    font-weight: 500;
+    font-variant: small-caps;
+    display: block;
+}
+
+input {
+    display: block;
+    height: 40px;
+    width: 20px;
+    background-color: #32353c;
+    border: none;
+    color: white;
+}
+
+
+input:hover {
+    background-color: #434750;
+}
+
+.button {
+    display: flex;
+}
+
+.submitButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    position: relative;
+    background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    padding: 12px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: inherit;
+    text-align: center;
+    letter-spacing: .03em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+}
+
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.register>a {
+    color: ivory;
+    text-decoration: none;
+}
+
+.register>a:hover {
+    color: rgb(208 208 74);
+}
+
+.col2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+footer {
+    background-color: #171a21;
+    color: #fff;
+    padding: 12px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+footer p {
+    color: white;
+}
+
+footer ul .navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    margin-right: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}

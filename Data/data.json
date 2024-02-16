@@ -1,0 +1,27 @@
+{
+    "Game": [
+        {
+            "name": "Spiderman",
+            "price": 200,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/1817070/capsule_616x353.jpg?t=1673999865"
+        },
+        {
+            "name": "God of war",
+            "price": 200,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/1817070/capsule_616x353.jpg?t=1673999865"
+        },
+        {
+            "name": "unpacking",
+            "price": 200,
+            "img": [
+                "https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_427677cf78195df94702f0a963cd9eaeb9d8935a.600x338.jpg",
+                "https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_ad14a7daa190cb150fbb070afc70bc64d66a5e2e.600x338.jpg?t=1673999865",
+                "https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_dfba6f2477bfa42be69ddfdffbd421d3943d20bf.600x338.jpg?t=1673999865"
+            ]
+        }
+    ],
+    "user": {
+        "name": "admin",
+        "password": "123"
+    }
+}

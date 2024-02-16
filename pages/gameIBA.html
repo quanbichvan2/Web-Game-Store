@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="../cssAll/gameDetail.css">
+    <link rel="stylesheet" href="../cssAll/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar-ss"></div>
+        <div class="content-detail">
+            <div class="content-image">
+                <p class="content-image-play">
+                    Play <ion-icon name="play-circle"></ion-icon> Game
+                </p>
+                <div class="content-image-infor">
+                    <h3>IBA 20129</h3>
+                    <div class="content-image-infor-start">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <p>Bạn sẽ hóa thân thành nhân vật Spider-Man. Đánh bại kẻ xấu bằng những kỹ năng từ nhân vật để bảo
+                        vệ hòa bình của thành phố. Đây sẽ là một tựa game mà bạn khó có thể bỏ qua ...</p>
+                    <hr>
+                    <div style="display: flex; gap: 1rem;">
+                        <button>Giá:&nbsp;
+                            <p>200</p>
+                            $
+                        </button>
+                        <button onclick="addCart(this)">Mua</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content-image-item">
+                <div class="content-image-item-box">
+                    <div class="content-image-item-game" onclick="changeImg(this)">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1817070/capsule_616x353.jpg?t=1673999865"
+                            id="a" alt="anh">
+                    </div>
+                    <div class="content-image-item-game" onclick="changeImg(this)">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_427677cf78195df94702f0a963cd9eaeb9d8935a.600x338.jpg"
+                            id="b" alt="anh">
+                    </div>
+                    <div class="content-image-item-game" onclick="changeImg(this)">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_ad14a7daa190cb150fbb070afc70bc64d66a5e2e.600x338.jpg?t=1673999865"
+                            id="c" alt="anh">
+                    </div>
+                    <div class="content-image-item-game" onclick="changeImg(this)">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_dfba6f2477bfa42be69ddfdffbd421d3943d20bf.600x338.jpg?t=1673999865"
+                            id="d" alt="anh">
+                    </div>
+                </div>
+            </div>
+        </div> <br> <br> <br>
+        <footer>
+            <p>&copy; 2023 Game Website của Yun (Vân Quan)</p>
+            <ul>
+                <div class="navbar">
+                    <li><a href="../pages/about.html">Giới Thiệu</a></li>
+                    <li><a href="../pages/about.html">Giới Thiệu</a></li>
+                    <li><a href="#">Điều Khoản</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="../pages/support.html">Liên Hệ : 0906 333 687</a></li>
+                </div>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="../JSAll/myCartDetail.js"></script>
+<script src="../JSAll/IsLogin.js"></script>
+<script src="../JSAll/nav.js"></script>
+<script src="../JSAll/getStorage.js">
+    getGioHang();
+</script>
+<script>
+    function changeImg(e) {
+        document.querySelector('.content-image').style.backgroundImage = "url(" + e.children[0].src + ")"
+    }
+</script>
+
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./cssAll/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar-ss"></div>
+        <div class="content">
+            <div class="content-right">
+                <div class="content-right-image">
+                    <img src="./image/gamer21.png">
+                </div>
+                <div class="content-right-content">
+                    <p class="content-right-content-title">Thể loại</p>
+                    <div class="content-right-content-genre">
+                        <a href="./pages/genres.html">Hành động</a>
+                        <a href="./pages/genres.html">Phiêu Lưu</a>
+                        <a href="./pages/genres.html">Kinh Dị</a>
+                        <a href="./pages/genres.html">Quản Lý Thời Gian</a>
+                        <a href="./pages/genres.html">Giải Đố</a>
+                        <a href="./pages/genres.html">Nhập Vai</a>
+                        <a href="./pages/genres.html">Bắn Súng</a>
+                        <a href="./pages/genres.html">Giả Lập</a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-left">
+                <div class="popular">
+                    <div class="popular-title">GAME NỔI BẬT MÙA NÀY</div>
+                    <div class="flash-sale">
+                        <div class="flash-sale-timer" id="flash-sale-timer" style="color: #00ff2a">
+                            <h3>Time left:
+                                00:00:00</h3>
+                        </div>
+                        <div class="flash-sale-discount">
+                            <h2>Get 50% sale off on all games!</h2>
+                        </div>
+                    </div>
+                    <div class="popular-slide">
+                        <div class="popular-slide--group--button">
+                            <button class="prev" onclick="prevSlide()">
+                                <ion-icon name="chevron-back-outline"></ion-icon>
+                            </button>
+                            <button class="next" onclick="nextSlide()">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="popular-slide--group" id="slide">
+                            <div class="popular-slide--group--image">
+                                <img src="https://cdn.akamai.steamstatic.com/steam/apps/1817070/capsule_616x353.jpg?t=1673999865"
+                                    alt="">
+                            </div>
+                            <div class="popular-slide--group--image">
+                                <img src="https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_dfe778bf6d66e952e4acd4e1f926f7615b609ddf.600x338.jpg"
+                                    alt="">
+                            </div>
+                            <div class="popular-slide--group--image">
+                                <img src="https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_427677cf78195df94702f0a963cd9eaeb9d8935a.600x338.jpg"
+                                    alt="">
+                            </div>
+                            <div class="popular-slide--group--image">
+                                <img src="https://cdn.akamai.steamstatic.com/steam/apps/1817070/ss_ad14a7daa190cb150fbb070afc70bc64d66a5e2e.600x338.jpg?t=1673999865"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offers">
+                    <div class="offer-title">
+                        <h1>
+                            ĐỀ XUẤT
+                        </h1>
+                    </div>
+                    <div class="offer-content">
+                        <div class="offer-content-left">
+                            <img src="https://i.pinimg.com/564x/dd/58/c4/dd58c4f92c499fa3c0ef9e147dcda989.jpg" alt="">
+                        </div>
+                        <div class="offer-content-right">
+                            <div class="offer-content-right-top">
+                                <div class="offer-content-right-top-game">
+                                    <img src="https://i.pinimg.com/564x/74/29/37/742937a47ff6f97f9e631f7b4e98239b.jpg">
+                                    <div class="offer-content-right-top-description">
+                                        Toad Story
+                                        <br>
+                                        Cuộc phiêu lưu của Ếch
+                                    </div>
+                                </div>
+                                <div class="offer-content-right-top-game">
+                                    <img src="https://i.pinimg.com/564x/1c/15/8e/1c158e77ca6383039f56ebddddc07664.jpg">
+                                    <div class="offer-content-right-top-description">
+                                        Labs Book One
+                                        <br>
+                                        game nhập vai phiêu lưu hành động võ thuật chiến đấu
+                                        <br>
+                                        Đi tìm sách hoàn thành lab web
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offer-content-right-bottom">
+                                <div class="offer-content-right-top-game">
+                                    <img src="https://i.pinimg.com/564x/54/db/25/54db2573d0cfd1259d5301451ac7d722.jpg">
+                                    <div class="offer-content-right-top-description">
+                                        LightFall
+                                        <br>
+                                        game nhập vai phiêu lưu
+                                        <br>
+                                        Đi tìm ánh sáng nơi cuối con đường nộp ASM
+                                    </div>
+                                </div>
+                                <div class="offer-content-right-top-game">
+                                    <img src="https://i.pinimg.com/564x/b9/9a/60/b99a60ac3019c5c719172377bcc43776.jpg">
+                                    <div class="offer-content-right-top-description">
+                                        Boom Boom
+                                        <br>
+                                        game chiến đấu hành động
+                                        <br>
+                                        Cuộc hành trình bế tắc dò mìn bugs ASM Web
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Game Website của Yun (Vân Quan)</p>
+        <ul>
+            <div class="navbar">
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="#">Điều Khoản</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="support.html">Liên Hệ : 0906 333 687</a></li>
+            </div>
+        </ul>
+    </footer>
+
+    <script type="text/javascript">
+        window.$crisp = []; window.CRISP_WEBSITE_ID = "1fb40106-e88b-4b68-a421-71aa0997327d"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="./JSAll/slide.js"></script>
+
+    <script src="./JSAll/nav.js"></script>
+
+    <script>
+        let a;
+        fetch('./Data/data.json')
+            .then(response => response.json())
+            .then(data => {
+                a = data;
+                console.log(a);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        console.log(a)
+        //test user login
+        console.log(localStorage.getItem('user'));
+    </script>
+    <script src="./JSAll/getStorage.js">
+    </script>
+    <script src="./JSAll/saleClock.js"></script>
+</body>
+
+</html>
+
+<!-- 
+thêm menu đứng (V)
+chuyển tiếng anh qua việt
+có định vị (V)
+có video nhúng (v)
+pass phải có con mắt (V)
+click vô sản phẩm ra chi tiết sản phẩm (v)
+-->
+
+<!-- 
+phần 2
+làm lại chuyển động ảnh animation của nhện nhọ 
+tạo icon chữ i nghĩa là information
+
+qua support.html
+sửa lại ảnh admin, làm màu cho nó warm paper 
+lấy ý tưởng từ frame.comunity
+-->

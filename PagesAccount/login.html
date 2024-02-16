@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login The Gamers</title>
+    <link rel="stylesheet" href="../cssAll/styleLogin.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="left">
+                <a class="logo" href="../index.html">
+                    <img src="../image/gamer21.png" alt="">
+                </a>
+                <ul>
+                    <li><a href="../index.html">TRANG CHỦ</a></li>
+                    <li><a href="../pages/genres.html">CỬA HÀNG</a>
+                        <ul class="sub-menu">
+                            <li><a href="../pages/genres.html">Hành động</a></li>
+                            <li><a href="../pages/genres.html">Phiêu Lưu</a></li>
+                            <li><a href="../pages/genres.html">Kinh Dị</a></li>
+                            <li><a href="../pages/genres.html">Quản Lý Thời Gian</a></li>
+                            <li><a href="../pages/genres.html">Giải Đố</a></li>
+                            <li><a href="../pages/genres.html">Nhập Vai</a></li>
+                            <li><a href="../pages/genres.html">Bắn Súng</a></li>
+                            <li><a href="../pages/genres.html">Giả Lập</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../pages/about.html">GIỚI THIỆU</a></li>
+                    <li><a href="../pages/support.html">HỖ TRỢ</a></li>
+                </ul>
+            </div>
+        </div>
+        <article>
+            <div>
+                <div class="content">
+                    <h5 class="content-title">Đăng Nhập</h5>
+                </div>
+                <div class="form-container">
+                    <div class="loginLog">
+                        <div class="col1">
+                            <form id="loginForm">
+                                <div class="newLoginLog">
+                                    <label>
+                                        Đăng nhập tên tài khoản
+                                    </label>
+                                    <input style="width: 397px;" type="text" id="email">
+
+                                    <label style="color: #afafaf;">
+                                        Mật Khẩu
+                                    </label>
+                                    <div class="box">
+                                        <input style="width: 397px;" type="password" id="password">
+                                        <ion-icon name="eye-off" id="eye_close"></ion-icon>
+                                        <ion-icon name="eye" id="eye"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <input type="checkbox">
+                                    <span style="color: #afafaf;margin: 10px;">
+                                        Ghi Nhớ
+                                    </span>
+                                </div>
+                                <div class="submitButton">
+                                    <button onclick="login(this)">Đăng Nhập</button>
+                                </div>
+                                <div class="register">
+                                    <a href="../PagesAccount/register.html">Bạn chưa có tài khoản?</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col2">
+                            <label>
+                                Đăng Nhập với QR
+                            </label>
+                            <a href="../PagesAccount/login.html">
+                                <img src="../image/qrcode_chrome.png" class="QR" alt="testQR"
+                                    style="height: 200px;margin-left: 35px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </div>
+    <footer>
+        <p>&copy; 2023 Game Website của Yun (Vân Quan)</p>
+        <ul>
+            <div class="navbar">
+                <li><a href="../pages/about.html">Giới Thiệu</a></li>
+                <li><a href="#">Điều Khoản</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="../pages/support.html">Liên Hệ : 0906 333 687</a></li>
+            </div>
+        </ul>
+    </footer>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    let emailInput = document.querySelector("#email");
+    let passwordInput = document.querySelector("#password");
+    let loginForm = document.querySelector("#loginForm");
+
+    loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+    })
+
+    const login = (e) => {
+        if (emailInput.value == "admin" && passwordInput.value == "123") {
+            localStorage.setItem("isLogin", true);
+            window.location.href = "/"
+        }
+        else {
+            alert("Thông tin đăng nhập bị sai vui lòng nhập lại!");
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../cssAll/styleStores.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar-ss">
+        </div>
+        <div class="content">
+            <div class="hagtag">
+                <a href="#"># Hành động</a>
+                <a href="#"># Kinh Dị</a>
+                <a href="#"># Quản Lý Thời Gian</a>
+                <a href="#"># Phiêu Lưu</a>
+                <a href="#"># Giải Đố</a>
+                <a href="#"># Nhập Vai</a>
+                <a href="#"># Giả Lập</a>
+                <a href="#"># Bắn Súng</a>
+
+            </div>
+            <div class="poster grid" id="products">
+            </div>
+            <footer>
+                <p>&copy; 2023 Game Website của Yun (Vân Quan)</p>
+                <ul>
+                    <div class="navbar">
+                        <li><a href="../pages/about.html">Giới Thiệu</a></li>
+                        <li><a href="#">Điều Khoản</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="../pages/support.html">Liên Hệ : 0906 333 687</a></li>
+                    </div>
+                </ul>
+            </footer>
+        </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script src="../JSAll/nav.js"></script>
+<script src="../JSAll/myCartDetail.js"></script>
+<script>
+    // Hiển thị giỏ hàng khi load trang
+    window.onload = function () {
+        var gioHang = localStorage.getItem('giohang');
+        console.log(gioHang)
+        if (gioHang) {
+            gioHang = JSON.parse(gioHang).giohang;
+            giohang = gioHang;
+            document.getElementById("mycart").innerHTML = showCart();
+        }
+    };
+</script>
+
+<script src="../JSAll/getStorage.js"></script>
+<script src="../JSAll/myCartStore.js"></script>
+
+<script>
+    var listProduct = [
+        {
+            "tenSp": "IBA 2k23",
+            "giaSp": 159,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/1919590/capsule_616x353.jpg?t=1673625785",
+            "tag": "# Mô Phỏng",
+            "href": "../pages/gameDetail.html"
+        }, {
+            "tenSp": "Returnal",
+            "giaSp": 80,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/1649240/capsule_616x353.jpg?t=1676476643",
+            "tag": "# Hành động #Kinh dị",
+            "href": "../pages/gameDetail.html"
+        }, {
+            "tenSp": "BorderLands3",
+            "giaSp": 10,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/397540/capsule_616x353.jpg?t=1657214217",
+            "tag": "# Hành động # Bắn súng",
+            "href": "../pages/gameDetail.html"
+        }, {
+            "tenSp": "Marvel's Spider-Man Remastered",
+            "giaSp": 200,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/1817070/capsule_616x353.jpg?t=1673999865",
+            "tag": "# Hành động # Nhập Vai",
+            "href": "../pages/gameDetail.html"
+        }, {
+            "tenSp": "Wild Heart",
+            "giaSp": 199,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/1938010/capsule_616x353.jpg?t=1676571541",
+            "tag": "# Hành động #Phiêu Lưu",
+            "href": "../pages/gameDetail.html"
+        }, {
+            "tenSp": "ASTRONEER",
+            "giaSp": 20,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/361420/header.jpg?t=1656698434",
+            "tag": "# Hành động #Phiêu Lưu",
+            "href": "../pages/gameDetail.html"
+        }, {
+            "tenSp": "Cities Skylines",
+            "giaSp": 30,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/255710/header.jpg?t=1670837127",
+            "tag": "# Quản Lý Thời Gian",
+            "href": "../pages/gameDetail.html"
+        }, {
+            "tenSp": "Unpacking",
+            "giaSp": 20,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/1135690/header.jpg?t=1667779371",
+            "tag": "# Giải Đố",
+            "href": "../pages/gameDetail.html"
+        }, {
+            "tenSp": "HOGWARTS LEGACY",
+            "giaSp": 200,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/990080/capsule_616x353.jpg?t=1675377506",
+            "tag": "# Hành động # Phiêu Lưu # Nhập Vai",
+            "href": "../pages/gameDetail.html"
+        }, {
+            "tenSp": "Call Of Duty : Mùa 2",
+            "giaSp": 50,
+            "img": "https://cdn.akamai.steamstatic.com/steam/apps/1938090/capsule_616x353.jpg?t=1676681202",
+            "tag": "# Hành động # Bắn Súng",
+            "href": "../pages/gameDetail.html",
+            "productId": 1
+        },
+    ]
+    var htmlProducts = ``;
+    listProduct.forEach((element, index) => {
+        htmlProducts += `
+                        <div class="poster_game_left">
+                            <div class="item">
+                                <img src="${element.img}">
+                                <ion-icon name="logo-windows" id="window"></ion-icon>
+                                <div class="poster_game_left_infor">
+                                    <span style="background-color: red; color: black;">${element.tag}</span>
+                                    <p>${element.tenSp}</p>
+                                    <span>
+                                        <p style="background-color:  rgb(132, 132, 132);">${element.giaSp}</p>
+                                        $
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <ion-icon name="cart-outline" onclick="addCartStores(${index})"></ion-icon>
+                                <ion-icon name="heart-circle-outline"></ion-icon>
+                                <a href="../pages/gameDetail.html">
+                                    <ion-icon name="information-circle-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    `
+    });
+
+    document.querySelector("#products").innerHTML = htmlProducts;
+
+</script>
+
+</html>
